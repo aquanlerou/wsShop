@@ -1,0 +1,198 @@
+<view class="main">
+    <view class="categroy-left">
+        <view wx:for="{{category}}" wx:key="index" data-id="{{item.id}}" data-index="{{index}}"
+            bindtap="switchTab"
+            class="cate-list {{curIndex === index?'on':''}}">{{item.name}}</view>
+    </view>
+
+    <scroll-view class="categroy-right" scroll-y="{{isScroll}}" scroll-into-view="{{toView}}" scroll-with-animation="true">
+         <block wx:for="{{detail}}" wx:for-index wx:key="idx">
+            <view id="{{item.id}}" class="cate-box">
+                <view class="cate-banner">
+                    <image src="{{item.banner}}"></image>
+                </view>
+                <view class="cate-title">
+                    <text>{{item.cate}}</text>
+                </view>
+                <view class="product">
+                    <view class="product-list" wx:for="{{item.detail}}" wx:key="index" wx:for-item="val">
+                        <navigator url="../list/list">
+                            <image src="{{val.thumb}}"></image>
+                            <view class="classname"><text>{{val.name}}</text></view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </block> 
+
+
+         <block>
+            <view id="guowei" class="cate-box">
+                <view class="cate-banner">
+                    <image src="/image/c1.png"></image>
+                </view>
+                <view class="cate-title">
+                    <text>果味</text>
+                </view>
+                <view class="product">
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/c2.png"></image>
+                            <view class="lihua"><text>梨花带雨</text></view>
+                            <image src="/image/sg5.png"></image>
+                            <view class="classname"><text>火龙果</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/sg1.png"></image>
+                            <view class="pingguo"><text>苹果</text></view>
+                            <image src="/image/sg2.png"></image>
+                            <view class="fspingguo"><text>富士苹果</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/sg3.png"></image>
+                            <view class="youzi"><text>柚子</text></view>
+                            <image src="/image/sg4.png"></image>
+                            <view class="liulian"><text>榴莲</text></view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </block>
+
+
+        <block>
+            <view id="shucai" class="cate-box">
+                <view class="cate-banner">
+                    <image src="/image/c1.png"></image>
+                </view>
+                <view class="cate-title">
+                    <text>蔬菜</text>
+                </view>
+                <view class="product">
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/sc1.png"></image>
+                            <view class="yumi"><text>玉米</text></view>
+                            <image src="/image/sc2.jpg"></image>
+                            <view class="hyumi"><text>黑玉米</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/sc3.png"></image>
+                            <view class="xhs"><text>西红柿</text></view>
+                            <image src="/image/sc4.png"></image>
+                            <view class="baicai"><text>白菜</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/sc5.png"></image>
+                            <view class="shq"><text>上海青</text></view>
+                            <image src="/image/sc6.png"></image>
+                            <view class="hgua"><text>黄瓜</text></view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </block>
+
+        <block>
+            <view id="xiaochi" class="cate-box">
+                <view class="cate-banner">
+                    <image src="/image/c1.png"></image>
+                </view>
+                <view class="cate-title">
+                    <text>小吃</text>
+                </view>
+                <view class="product">
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/xc1.png"></image>
+                            <view class="lt"><text>辣条</text></view>
+                            <image src="/image/xc2.png"></image>
+                            <view class="nr"><text>牛肉</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/xc3.png"></image>
+                            <view class="mj"><text>面筋</text></view>
+                            <image src="/image/xc4.png"></image>
+                            <view class="mb"><text>面包</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/xc5.png"></image>
+                            <view class="jianguo"><text>坚果</text></view>
+                            <image src="/image/xc6.png"></image>
+                            <view class="kaixg"><text>开心果</text></view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </block>
+
+        <block>
+            <view id="yinliao" class="cate-box">
+                <view class="cate-banner">
+                    <image src="/image/c1.png"></image>
+                </view>
+                <view class="cate-title">
+                    <text>饮料</text>
+                </view>
+                <view class="product">
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <image src="/image/yl1.png"></image>
+                            <view class="whc"><text>网红茶</text></view>
+                            <image src="/image/yl2.png"></image>
+                            <view class="wtn"><text>维他奶</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                          <image src="/image/yl3.png"></image>
+                            <view class="kele"><text>可乐</text></view>
+                            <image src="/image/yl4.png"></image>
+                            <view class="guozhi"><text>果汁</text></view>
+                        </navigator>
+                    </view>
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                           <image src="/image/yl5.png"></image>
+                            <view class="hongniu"><text>RedCow</text></view>
+                            <image src="/image/yl6.png"></image>
+                            <view class="kafei"><text>咖啡</text></view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </block>
+
+
+        <block>
+            <view id="more" class="cate-box">
+                <view class="cate-banner">
+                    <image src="/image/c1.png"></image>
+                </view>
+                <view class="cate-title">
+                    <text>更多选择</text>
+                </view>
+                <view class="product">
+                    <view class="product-list">
+                        <navigator url="../list/list">
+                            <view class="more"><text>more...</text></view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+
+</view>

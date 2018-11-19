@@ -1,0 +1,84 @@
+<view class="main">
+    <swiper indicator-dots="true" autoplay="true" interval="{{interval}}" duration="{{duration}}" circular="true">
+        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image" width="100%"/>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="search">
+        <navigator url="search/search">
+            <view class="search-text">
+                <icon class="weui-icon-search_in-box search-icon" type="search" size="14"></icon>
+                搜 索
+            </view>
+        </navigator>
+    </view>
+    <view class="selected">
+        <view class="select-title"><text>当季新品</text></view>
+        <view class="select-top">
+            <view class="select-top-small">
+                <navigator url="list/list">
+                    <image src="http://pic2xx1kx.bkt.clouddn.com/s1.png"></image>
+                </navigator>
+            </view>
+            <view class="select-top-small">
+                <navigator url="list/list">
+                    <image src="http://pic2xx1kx.bkt.clouddn.com/s2.png"></image>
+                </navigator>
+            </view>
+        </view>
+        <view class="select-bottom">
+            <navigator url="list/list">
+                <image src="http://pic2xx1kx.bkt.clouddn.com/s3.png"></image>
+            </navigator>
+        </view>
+    </view>
+    <view class="newest">
+        <view class="newest-title"><text>最近新品</text></view>
+        <view class="newest-box">
+            <view class="newest-list">
+                <navigator url="details/details">
+                    <image src="https://img.alicdn.com/imgextra/i4/880734502/O1CN010s5exR1j7xYzNzWvf_!!880734502.jpg_430x430q90.jpg"></image>
+                    <view class="newest-text"><text>小瓶果 35gx12瓶/盒</text></view>
+                    <view class="newest-text"><text>¥ 168.00</text></view>
+                </navigator>
+            </view>
+            <view class="newest-list">
+                <navigator url="details/details">
+                    <image src="https://img.alicdn.com/imgextra/i3/880734502/TB2yTtqbkvoK1RjSZFDXXXY3pXa_!!880734502.jpg_430x430q90.jpg"></image>
+                    <view class="newest-text"><text>每日坚果 750g</text></view>
+                    <view class="newest-text"><text>¥ 149.00</text></view>
+                </navigator>
+            </view>
+            <view class="newest-list">
+                <navigator url="details/details">
+                    <image src="https://img.alicdn.com/imgextra/i1/880734502/O1CN011j7xYmdWoOf7ULs_!!880734502.jpg_430x430q90.jpg"></image>
+                    <view class="newest-text"><text>肥宅鲜切饲料 45gx3</text></view>
+                    <view class="newest-text"><text>¥ 12.90</text></view>
+                </navigator>
+            </view>
+            <view class="newest-list">
+                <navigator url="details/details">
+                    <image src="https://img.alicdn.com/imgextra/i1/880734502/O1CN011j7xYX7ZKVClqTd_!!880734502.jpg_430x430q90.jpg"></image>
+                    <view class="newest-text"><text>撩烧 276g</text></view>
+                    <view class="newest-text"><text>¥ 44.90</text></view>
+                </navigator>
+            </view>
+            <view class="newest-list">
+                <navigator url="details/details">
+                    <image src="https://img.alicdn.com/imgextra/i3/880734502/TB2O4kovoOWBKNjSZKzXXXfWFXa_!!880734502.jpg_430x430q90.jpg"></image>
+                    <view class="newest-text"><text>夏威夷果 265gx2</text></view>
+                    <view class="newest-text"><text>¥ 48.90</text></view>
+                </navigator>
+            </view>
+            <view class="newest-list">
+                <navigator url="details/details">
+                    <image src="https://img.alicdn.com/imgextra/i2/880734502/O1CN011j7xYetLGd1Ftgc_!!880734502.jpg_430x430q90.jpg"></image>
+                    <view class="newest-text"><text>氧气吐司面包 800g</text></view>
+                    <view class="newest-text"><text>¥ 36.90</text></view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+</view>
